@@ -11,16 +11,20 @@ jobs:
         id: release
         with:
           release-type: node
-      - uses: actions/checkout@v4
+      - name: 📤 Checkout repository
+        uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
-      - uses: actions/setup-node@v4
+      - name: 🔧 Setup node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - name: ⏳ Installing dependencies
+        run: npm ci
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - name: 📤 Publish package
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
