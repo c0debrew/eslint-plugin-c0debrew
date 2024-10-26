@@ -20,7 +20,7 @@
     "url": "https://github.com/c0debrew/eslint-plugin-c0debrew/issues"
   },
   "homepage": "https://github.com/c0debrew/eslint-plugin-c0debrew#readme",
-  "devDependencies": {
+  "dependencies": {
     "@eslint/compat": "^1.2.1",
     "@eslint/js": "^9.13.0",
     "eslint": "^9.13.0",
