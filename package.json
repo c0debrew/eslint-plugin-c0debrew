@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-c0debrew",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Common ESLint rules.",
   "main": "src/index.mjs",
